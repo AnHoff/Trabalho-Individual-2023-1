@@ -34,5 +34,10 @@ torchvision = "0.15.2"
 vit-pytorch = "0.40.2"
 
 [[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
 name = "coca"
 url = "https://github.com/AnHoff/Trabalho-Individual-2023-1/"
+priority = "supplemental"
