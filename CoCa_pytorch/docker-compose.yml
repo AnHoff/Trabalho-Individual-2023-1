@@ -16,9 +16,9 @@ services:
     volumes:
       - db-data:/var/lib/mysql
 
-  coca_pytorch:
+  app:
     build:
-      context: ./coca_pytorch
+      context: ./app
       dockerfile: Dockerfile
     depends_on:
       - db
@@ -27,11 +27,11 @@ services:
     networks:
       - cocanet
     volumes:
-      - coca-data:/coca_pytorch/data
+      - app-data:/app/data
 
 networks:
   cocanet:
 
 volumes:
   db-data:
-  coca-data:
+  app-data:

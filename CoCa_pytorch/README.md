@@ -40,6 +40,22 @@ To build the images, you need to have Docker installed and running in your machi
 $ docker-compose up -d
 ```
 
+You can also run each container separatelly. Just run:
+
+```bash
+# Create database container
+docker build -t db-container -f db/Dockerfile db/
+
+# Execute database container
+docker run -d --name mysql-container -p 3306:3306 db-container
+
+# Create app container
+docker build -t app-container -f app/Dockerfile app/
+
+# Execute app container linked to the database container
+docker run -d --name coca-app-container --link mysql-container:mysql app-container
+```
+
 ## Usage
 
 First install the `vit-pytorch` (included in [requirements.txt](requirements.txt)) for the image encoder, which needs to be pretrained. Then:

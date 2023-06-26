@@ -51,12 +51,13 @@
 
     <p>After cloning the repository into your machine, follow these commands in the repository root to create and activate the virtual environment.</p>
 
-    <p>$ python -m venv env</p>
-    <p>$ source env/bin/activate</p>
+    <i>$ python -m venv env</i>
+    <br>
+    <i>$ source env/bin/activate</i>
 
     <p>With venv activated, you may now install the requirements and the project using the following command. This step may take a while.</p>
 
-    <p>$ pip install -r requirements.txt</p>
+    <i>$ pip install -r requirements.txt</i>
 
 <h2>Using Docker</h2>
 
@@ -64,14 +65,25 @@
 
   <p>To build the images, you need to have Docker installed and running in your machine. Then, use the following command in the repository root:</p>
 
-  <p>$ docker-compose up -d</p>
+  <i>$ docker-compose up -d</i>
+
+  <p>You can also run each container separatelly. Just run:</p>
+
+  <i>$ docker build -t db-container -f db/Dockerfile db/</i>
+  <br>
+  <i>$ docker run -d --name mysql-container -p 3306:3306 db-container</i>
+  <br>
+  <i>$ docker build -t app-container -f app/Dockerfile app/</i>
+  <br>
+  <i>$ docker run -d --name coca-app-container --link mysql-container:mysql app-container</i>
   
 <h2>Publishing</h2>
 
     <p>This step is completely optional. It's recommended to publish the library after every release. Run these commands on the repository root:</p>
 
-    <p>$ poetry build</p>
-    <p>$ poetry publish -r my-repository</p>
+    <i>$ poetry build</i>
+    <br>
+    <i>$ poetry publish -r my-repository</i>
 
     <p>If you need other publishing options, check <a href="https://python-poetry.org/docs/libraries/">Poetry documentation</a>.</p>
 
