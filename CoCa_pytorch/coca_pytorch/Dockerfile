@@ -1,10 +1,6 @@
-FROM python:3.9-slim
+FROM python:3.6
 
 WORKDIR /coca_pytorch
-
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
 
 COPY coca_pytorch.py .
 

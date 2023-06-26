@@ -16,7 +16,7 @@ services:
     volumes:
       - db-data:/var/lib/mysql
 
-  app:
+  coca_pytorch:
     build:
       context: ./coca_pytorch
       dockerfile: Dockerfile
@@ -27,11 +27,11 @@ services:
     networks:
       - cocanet
     volumes:
-      - app-data:/app/data
+      - coca_pytorch-data:/coca_pytorch/data
 
 networks:
   cocanet:
 
 volumes:
   db-data:
-  app-data:
+  coca_pytorch-data:
