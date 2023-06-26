@@ -24,6 +24,16 @@ $ poetry build
 $ poetry publish -r my-repository
 ```
 
+## Docker Image
+
+There are two containers for this project. One is for the database (it's not created yet, but it already has a Dockerfile prepared) and one for the application. The docker-compose.yml archive is responsible for relating both.
+
+To build the images, you need to have Docker installed and running in your machine. Then, use the following command:
+
+```bash
+$ docker-compose up -d
+```
+
 ## Usage
 
 First install the `vit-pytorch` (included in [requirements.txt](requirements.txt)) for the image encoder, which needs to be pretrained. Then:
