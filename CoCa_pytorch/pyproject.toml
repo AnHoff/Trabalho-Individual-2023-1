@@ -35,7 +35,4 @@ vit-pytorch = "0.40.2"
 
 [[tool.poetry.source]]
 name = "coca"
-url = "https://github.com/AnHoff/Trabalho-Individual-2023-1/tree/main"
-default = false
-secondary = false
-
+url = "https://github.com/AnHoff/Trabalho-Individual-2023-1/"
