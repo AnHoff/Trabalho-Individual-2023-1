@@ -27,11 +27,11 @@ services:
     networks:
       - cocanet
     volumes:
-      - coca_pytorch-data:/coca_pytorch/data
+      - coca-data:/coca_pytorch/data
 
 networks:
   cocanet:
 
 volumes:
   db-data:
-  coca_pytorch-data:
+  coca-data:

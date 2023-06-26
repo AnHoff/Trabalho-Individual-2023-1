@@ -1,4 +1,4 @@
-<img src="./coca.png" width="450px"></img>
+<img src="./coca.png" width="650px"></img>
 
 ## CoCa - Pytorch
 
@@ -12,6 +12,16 @@ This repository also chooses to adopt the specific transformer architecture from
 $ python -m venv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
+$ poetry build
+```
+
+## Publish
+
+This step is optional and will only work if the repository is public. Other information, as how to publish to a private repository, may be found in [Poetry documentation](https://python-poetry.org/docs/libraries/).
+
+```bash
+$ poetry build
+$ poetry publish -r my-repository
 ```
 
 ## Usage
