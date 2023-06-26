@@ -1,4 +1,4 @@
-<img src="./coca.png" width="650px"></img>
+<img src="./assets/coca.png" width="650px"></img>
 
 ## CoCa - Pytorch
 
