@@ -15,6 +15,12 @@ $ pip install -r requirements.txt
 $ poetry build
 ```
 
+PS: to see the documentation, insert the following command and open [index.html](_build/index.html) in your browser:
+
+```bash
+$ sphinx-build -b html source/ _build
+```
+
 ## Publish
 
 This step is optional and will only work if the repository is public. Other information, as how to publish to a private repository, may be found in [Poetry documentation](https://python-poetry.org/docs/libraries/).
