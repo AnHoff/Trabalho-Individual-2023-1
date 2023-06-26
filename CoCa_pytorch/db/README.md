@@ -6,14 +6,14 @@ This application still hasn't a database (DB). Nevertheless, we created a Docker
 
 It's simple to run: just follow the same steps provided in other docs.
 
-'''
+```
 python -m venv env
 source env/bin/activate
 pip install -r requirements.txt
-'''
+```
 
 After all the requirements are installed...
 
-'''
+```
 docker-compose up -d
-'''
+```
