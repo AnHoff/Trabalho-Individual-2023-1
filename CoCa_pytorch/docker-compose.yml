@@ -1,0 +1,37 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: coca_db
+      MYSQL_USER: coca_user
+      MYSQL_PASSWORD: coca_password
+    ports:
+      - 3306:3306
+    networks:
+      - cocanet
+    volumes:
+      - db-data:/var/lib/mysql
+
+  coca_pytorch:
+    build:
+      context: ./coca_pytorch
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    links:
+      - db:mysql
+    networks:
+      - cocanet
+    volumes:
+      - coca-data:/coca_pytorch/data
+
+networks:
+  cocanet:
+
+volumes:
+  db-data:
+  coca-data:

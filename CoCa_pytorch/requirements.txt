@@ -1,0 +1,4 @@
+einops==0.6
+torch==2.0.1
+torchvision==0.15.2
+vit-pytorch==0.40.2
