@@ -1,4 +1,4 @@
-<img src="./coca.png" width="650px"></img>
+<img src="./assets/coca.png" width="650px"></img>
 
 ## CoCa - Pytorch
 
@@ -13,6 +13,12 @@ $ python -m venv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
 $ poetry build
+```
+
+PS: to see the documentation, insert the following command and open [index.html](_build/index.html) in your browser:
+
+```bash
+$ sphinx-build -b html source/ _build
 ```
 
 ## Publish
@@ -32,6 +38,22 @@ To build the images, you need to have Docker installed and running in your machi
 
 ```bash
 $ docker-compose up -d
+```
+
+You can also run each container separatelly. Just run:
+
+```bash
+# Create database container
+docker build -t db-container -f db/Dockerfile db/
+
+# Execute database container
+docker run -d --name mysql-container -p 3306:3306 db-container
+
+# Create app container
+docker build -t app-container -f app/Dockerfile app/
+
+# Execute app container linked to the database container
+docker run -d --name coca-app-container --link mysql-container:mysql app-container
 ```
 
 ## Usage
