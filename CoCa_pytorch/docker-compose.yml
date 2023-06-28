@@ -18,7 +18,7 @@ services:
 
   app:
     build:
-      context: ./app
+      context: ./src/CoCa-pytorch
       dockerfile: Dockerfile
     depends_on:
       - db
