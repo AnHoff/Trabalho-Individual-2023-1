@@ -2,8 +2,8 @@ version: '3'
 services:
   db:
     build:
-      context: ./db
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.db
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: coca_db
@@ -18,8 +18,8 @@ services:
 
   app:
     build:
-      context: ./src/CoCa-pytorch
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.app
     depends_on:
       - db
     links:
