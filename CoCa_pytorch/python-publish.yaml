@@ -33,6 +33,6 @@ jobs:
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:
         username: __token__
-        password: ${{ secrets.pypi-AgEIcHlwaS5vcmcCJDQ3ZWNlMjdmLTRiZGMtNGJlMC05YTQzLTEzNjAyMDVlMWMxOQACKlszLCIxZjgzMzQ1ZC1jYmJhLTRjYzItOTYzZi1mMDE0ZjY3Zjk3NTYiXQAABiD1dBbjxzEQVWm4UYPQ55c4-bWXyQHAy1gjHqZ_5JW2Ow }}
+        password: ${{ secrets.TOKEN_API_PYPI }}
     -name: Build Documentation
       run: sphinx-build -b html source/ _build
