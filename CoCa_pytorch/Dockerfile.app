@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python","app/main.py"]
+CMD ["python","src/CoCa-pytorch/main.py"]
