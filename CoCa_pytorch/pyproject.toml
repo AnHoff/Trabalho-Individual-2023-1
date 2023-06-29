@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "CoCa-pytorch"
-version = "0.0.7"
+version = "0.0.8"
 description = "CoCa, Contrastive Captioners are Image-Text Foundation Models - Pytorch"
 
 license = "MIT"
@@ -13,7 +13,7 @@ authors = ["Phil Wang <lucidrains@gmail.com>"]
 
 repository = "https://github.com/lucidrains/CoCa-pytorch"
 readme = "README.md"
-packages = [{include = "app"}]
+packages = [{include = "src"}]
 
 keywords = [
     "artificial intelligence",
@@ -25,7 +25,7 @@ keywords = [
     ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 pytest = "7.2.0"
 pytest-cov = "4.0.0"
 einops = "0.6"

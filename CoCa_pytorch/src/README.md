@@ -22,5 +22,5 @@ pip install -r requirements.txt
 After all the requirements are installed...
 
 ```
-docker build -t app-container -f app/Dockerfile app/
+docker build -f ./Dockerfile.app .
 ```
