@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Project CI
 
 on:
   push:
@@ -16,3 +16,11 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build ./CoCa_pytorch --file ./CoCa_pytorch/Dockerfile.app --tag my-image-name:$(date +%s)
+    - name: Build Documentation
+      run: sphinx-build -b html source/ _build
+    - name: Poetry Build and Publish
+      run: |
+      poetry build
+      poetry publish
+    - name: Run Tests
+      run: pytest --cov

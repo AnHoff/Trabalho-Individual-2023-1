@@ -11,7 +11,7 @@ clone the repository
 ```
 git clone https://github.com/lucidrains/CoCa-pytorch.git
 ```
-To create an isolated virtual environment and install project dependencies. This helps ensure that the project runs with the correct versions of Python libraries and packages and prevents conflicts with other globally installed versions. Use the following commands:
+Then create an isolated virtual environment and install project dependencies. This helps ensure that the project runs with the correct versions of Python libraries and packages and prevents conflicts with other globally installed versions. Use the following commands:
 
 ```
 python -m venv env

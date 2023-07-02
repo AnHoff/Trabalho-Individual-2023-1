@@ -1,12 +1,12 @@
 FROM python:3.7
 
-WORKDIR /app
+WORKDIR /src
 
-COPY requirements.txt .
+COPY ../requirements.txt .
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python","src/CoCa-pytorch/main.py"]
+CMD ["python","CoCa-pytorch/main.py"]
